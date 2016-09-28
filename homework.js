@@ -27,8 +27,15 @@ var arrOfArr =
   [32, 35, 37, 39],
   [1000, 1001, 857, 1],
 ];
-
-
-
-
 // output ==> [5, 27, 39, 1001]
+var empty = [];
+	arrOfArr.forEach(function(a){
+		var bigNum = a.reduce(function (prev, curr) {
+			if (prev > curr) {
+				return prev;
+			} else {
+				return curr;
+			}
+		})
+	empty.push(bigNum);
+})
